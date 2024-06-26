@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rift 🌀</title>
+    <link rel="stylesheet" href="/css/output.css">
+    <script src="/scripts/main.js"></script>
+</head>
+<body class="flex flex-col justify-center min-h-screen">
+<div>
+    <div class="flex flex-col justify-center items-center mt-12 mb-8 px-4">
+        <div class="text-center w-full">
+            <h1 class="text-6xl sm:text-8xl">🌀</h1>
+            <h1 class="text-2xl sm:text-4xl font-semibold mt-4">links.rift.host</h1>
+        </div>
+        <div class="mt-8 flex flex-col items-center">
+            <form class="flex space-x-4">
+                <input type="text" class="border rounded px-4 py-2" placeholder="Long Link" required>
+                <button type="submit" class="text-white rounded px-4 py-2">Submit</button>
+            </form>
+        </div>
+        <p class="text-red-600" id="error"></p>
+    </div>
+</div>
+</body>
+<style>
+    button {
+        background-color: #4e5dfa;
+    }
+</style>
+</html>
