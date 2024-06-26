@@ -2,7 +2,7 @@ services:
   main:
     build: .
     ports:
-      - "${PORT}:${PORT}"
+      -  "8010:8010"
     environment:
       - MONGO_URI=mongodb://rift:7x56DwcDaXOdWuVFJrB7V4sm5QcH3tDoqk0T8mrAKKl40A8rwH@10.0.0.227:27017/?authMechanism=SCRAM-SHA-256
       - PORT=8010

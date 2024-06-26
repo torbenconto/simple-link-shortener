@@ -24,6 +24,8 @@ function handleSubmit(event) {
     event.preventDefault();
     const input = event.target.querySelector('input').value;
 
+    console.log(input);
+
     if (!input) {
         setErrorMessage('Please enter a URL');
         return
@@ -36,15 +38,15 @@ function handleSubmit(event) {
         return
     }
 
-    // Create a FormData instance
-    const formData = new FormData();
-    // Append the input value with the key 'url'
-    formData.append('url', input);
-
     // call env var $API_URL with input in post
     fetch(`/create`, {
         method: 'POST',
-        body: formData
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "shortKey": input.toString(),
+        })
     }).then(r => r.text())
         .then(shortLink => {
             const form = event.target;

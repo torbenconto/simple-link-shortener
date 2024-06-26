@@ -17,10 +17,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const client = new mongodb.MongoClient(mongoUri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+const client = new mongodb.MongoClient(mongoUri);
 
 let collection;
 
@@ -61,7 +58,7 @@ const registerLink = async (longLink) => {
 
 app.post('/create', async (req, res) => {
     try {
-        const { url: originalURL } = req.body;
+        const { shortKey: originalURL } = req.body;
 
         if (!originalURL) {
             return res.status(400).send('URL is required');
