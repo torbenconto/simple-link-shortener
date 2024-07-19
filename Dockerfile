@@ -10,6 +10,6 @@ COPY . .
 
 RUN npm run build:css
 
-EXPOSE 8011
+EXPOSE 8010
 
 CMD [ "npm", "start" ]
