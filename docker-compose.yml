@@ -4,6 +4,6 @@ services:
     ports:
       -  "8010:8010"
     environment:
-      - MONGO_URI=yours here
+      - MONGO_URI
       - PORT=8010
       - NODE_ENV=development
