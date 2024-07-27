@@ -1,6 +1,7 @@
 services:
   main:
     build: .
+    restart: unless-stopped
     ports:
       -  "8010:8010"
     environment:
